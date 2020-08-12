@@ -6,9 +6,9 @@ class Node{
     }
 }
 class DoublyLinkedList{
-    constructor(data = null, next = null, prev = null){
-        this.head = null;
-        this.tail = null;
+    constructor(head = null, tail = null){
+        this.head = head;
+        this.tail = tail;
         this.length = 0;
     }
 //     insert the element at the end of the list
