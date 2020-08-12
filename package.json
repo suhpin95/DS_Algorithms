@@ -1,0 +1,14 @@
+{
+  "name": "datastructures",
+  "version": "1.0.0",
+  "description": "Basic Implementation of all ADT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Data Structures"
+  ],
+  "author": "Suhas Pindiproli",
+  "license": "MIT"
+}
