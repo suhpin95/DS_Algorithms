@@ -5,7 +5,7 @@ class Node{
         this.prev = prev;
     }
 }
-class DoublyLinkedList{
+class  {
     constructor(head = null, tail = null){
         this.head = head;
         this.tail = tail;
@@ -61,7 +61,10 @@ class DoublyLinkedList{
 // Delete at the head
     shift(){
         let deleteNode = this.head;
-        if(!deleteNode) return null;
+        if(this.length === 1) {
+            this.tail = null;
+            this.head = null;
+        }
         else{
             this.head = deleteNode.next;
             deleteNode.next = null; 
