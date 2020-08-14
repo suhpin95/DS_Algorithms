@@ -135,6 +135,13 @@ class DoublyLinkedList {
         this.length--;
         return deletedNode;
     }
+    reverse(){
+        let current = this.tail;
+        for(var i = 0; i < this.length; i++){
+            current = current.next; 
+        }
+        return current;
+    }
 }
 
 let doublyLinkedList = new DoublyLinkedList();
