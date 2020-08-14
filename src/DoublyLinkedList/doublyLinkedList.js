@@ -5,7 +5,7 @@ class Node{
         this.prev = prev;
     }
 }
-class  {
+class DoublyLinkedList {
     constructor(head = null, tail = null){
         this.head = head;
         this.tail = tail;
@@ -27,19 +27,20 @@ class  {
     }
 //     delete at the end of the list
     pop(){
-        if(!this.tail) return null
+        if(!this.tail)return null
         if(this.length === 1){
             this.head = null;
             this.tail = null;
         }
         let prevNode = this.tail.prev;
         this.tail = prevNode;
-        this.tail.next = null; 
 
-        let deletedNode = prevNode.next;
+        let deletedNode = prevNode.next;  
+        this.tail.next = null;
         
+        deletedNode.prev = null; 
         this.length--;
-        return deletedNode; 
+        return deletedNode;
     }
 // Insert at the head
     unshift(data){
@@ -68,9 +69,71 @@ class  {
         else{
             this.head = deleteNode.next;
             deleteNode.next = null; 
+            this.head.prev = null;
         }
         this.length --;
         return deleteNode;
+    }
+    // Get element using the index;
+    get(index){
+        if(index < 0 || index >= this.length) return null;
+        let node;
+        // Check from which point this closer
+        let fromStart = index  
+            ,fromEnd = this.length - index;
+        index = Math.min(fromEnd,fromStart);
+        // closer from end
+        if(index === fromEnd){
+            node = this.tail;
+            for(var i = this.length - 1; i > index; i--){
+                node = node.prev;
+            }
+            return node;
+        } else { 
+            node = this.head;
+            for(var i = 0; i < index; i++){
+                node = node.next;
+            }
+            return node;
+        }
+    }
+    // Update element using the index;
+    set(index,val){
+        let foundNode = this.get(index);
+        if(!!foundNode){
+            foundNode.data = val;
+            return true;
+        }
+        return false;
+    }
+    insert(index,val){
+        // if 0 or this.length handle the case
+        if(index < 0 || index > this.length) return false;
+        if(index === 0) return !!this.unshift(val);
+        if(index === this.length) return !!this.push(val);
+
+        var newNode = new Node(val);
+        var beforeNode = this.get(index-1);
+        var afterNode = beforeNode.next;
+        
+        beforeNode.next = newNode, newNode.prev = beforeNode;
+        newNode.next = afterNode, afterNode.prev = newNode;
+        this.length++;    
+        return true;
+    }
+    remove(index){
+        if(index < 0 || index >= this.length) return false;
+        if(index === 0) return this.shift();
+        if(index === this.length - 1 ) return this.pop();
+
+        let prevNode = this.get(index - 1);
+        let deletedNode = prevNode.next;
+        prevNode.next = deletedNode.next;
+        deletedNode.next.prev = prevNode;
+
+        deletedNode.next = null, deletedNode.prev = null;
+        this.length--;
+        return deletedNode;
     }
 }
 
