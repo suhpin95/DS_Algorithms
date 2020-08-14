@@ -138,9 +138,12 @@ class DoublyLinkedList {
     reverse(){
         let current = this.tail;
         for(var i = 0; i < this.length; i++){
-            current = current.next; 
+            if(current){
+                console.log(current.data);
+                current = current.prev;    
+            }
+            if(!current) return "Reverse Traversal completed"
         }
-        return current;
     }
 }
 
