@@ -11,37 +11,26 @@ class Stack{
         this.length = 0;
     }
     push(val){
-        let node = new Node(val);
-        if(this.length === 0){
-            this.last = node;
-            this.first = node;
-        } else{
-            let current = this.last;
-            current.next = node;
-            this.last = node;
+        let newNode = new Node(val);
+        if(!this.first){
+            this.first = newNode;
+            this.last = newNode;
+        } else {
+            let temp = this.first;
+            this.first = newNode;
+            this.first.next = temp;
         }
-        this.length++;
-        return this;
+        return ++this.size;
     }
-
     pop(){
-        if(this.length === 0){
-            this.first = null;
+        if(!this.first) return null;
+        let temp = this.first;
+        if(this.first === this.last){
             this.last = null;
-            return "Stack is Empty";
         }
-        let prevNode = this.first;
-        let newLast = prevNode;
-        while(prevNode.next){
-            newLast = prevNode;
-            prevNode = prevNode.next;
-        }
-
-        newLast.next = null;
-        this.last = newLast;
-        
-        this.length--;
-        return prevNode;
+        this.first = this.first.next;
+        this.size--;
+        return temp.value;
     }
 }
 let stack = new Stack();
