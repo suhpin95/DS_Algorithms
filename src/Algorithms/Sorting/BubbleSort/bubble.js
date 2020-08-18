@@ -1,6 +1,12 @@
 /**
- * Write a function
- * performed bubble sort
+ * Write a function that
+ * performs bubble sort
+ */
+
+/**
+ * 
+ * @param {*} arr 
+ * @returns {Array}
  */
 const bubble = arr => {
     let i = 0,

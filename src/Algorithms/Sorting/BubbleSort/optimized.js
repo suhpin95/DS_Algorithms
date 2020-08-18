@@ -1,6 +1,12 @@
 /**
  * This is an optimized version of the bubble sort
  */
+
+ /**
+  * 
+  * @param {*} arr 
+  * @returns {Array}
+  */
 const bubbleSort = arr => {
     // use this as a flag to break the loop
     let swaps;
