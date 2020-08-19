@@ -2,7 +2,10 @@
  * Write a function that would perform
  * Merge Sort of the given array
  */
-
+/**
+ * 
+ * @param {*} arr 
+ */
 const mergeSort = arr => {
     // 1. Base Case
     if(arr.length < 2) return arr
@@ -14,7 +17,12 @@ const mergeSort = arr => {
 
     return mergeHelper(left,right);
 }
-
+/**
+ * 
+ * @param {*} arr1 
+ * @param {*} arr2 
+ * @returns {Array}
+ */
 const mergeHelper = (arr1,arr2) => {
         //1. use pointer to handle the traversal
         let i = 0
