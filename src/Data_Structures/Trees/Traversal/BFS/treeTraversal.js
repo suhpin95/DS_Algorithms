@@ -1,5 +1,5 @@
 /**
- * Implemnt Tree Traversal 
+ * Implement Tree Traversal 
  * using BST
  */
 class Node {
@@ -44,33 +44,6 @@ class BST{
             }
         }
     }
-
-    /**
-     * 
-     * @param {*} val 
-     */
-    find(val){
-        if(!this.root)return "Empty Tree"
-        let current = this.root;
-        let flag = false;
-        //if root is the value
-        if(current.data === val) return true;
-        while(current && !flag){
-            if(val < current.data){
-            // traverse left
-                current = current.left;
-            } else if(val > current.data){ 
-            // traverse right
-                current = current.right;
-            } else{
-                flag = true;
-            }
-        }
-//      Edge Case
-        if(!flag)return false;
-        return current;
-    }
-
     /**
      * @returns {Array}
      */
