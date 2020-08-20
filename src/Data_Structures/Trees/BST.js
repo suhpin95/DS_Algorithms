@@ -1,3 +1,7 @@
+/**
+ * Implemnt BST using 
+ * Iteration as well as Recursion Logic
+ */
 class Node {
     constructor(data, left = null, right = null){
         this.left = left;
@@ -9,6 +13,10 @@ class BST{
     constructor(){
         this.root = null;
     }
+    /**
+     * 
+     * @param {*} val 
+     */
     insert(val){
         let node = new Node(val);
         if(!this.root){
@@ -36,6 +44,11 @@ class BST{
             }
         }
     }
+
+    /**
+     * 
+     * @param {*} val 
+     */
     find(val){
         if(!this.root)return "Empty Tree"
         let current = this.root;
@@ -56,8 +69,9 @@ class BST{
 //      Edge Case
         if(!flag)return false;
         return current;
-    }
+    }   
 }
+
 let bst = new BST();
 bst.insert(100);
 bst.insert(50);
