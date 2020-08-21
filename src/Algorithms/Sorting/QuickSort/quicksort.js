@@ -1,5 +1,12 @@
 import { pivotHelper } from "./pivotHelper.js";
 
+/**
+ * 
+ * @param {*} arr 
+ * @param {*} left 
+ * @param {*} right
+ * @returns { Array } 
+ */
   const quickSort = (arr, left = 0, right = arr.length - 1) => {
     if (left < right) {
       let pivotIndex = pivotHelper(arr, left, right);      

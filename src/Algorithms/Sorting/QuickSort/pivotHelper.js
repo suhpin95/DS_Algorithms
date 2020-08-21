@@ -4,6 +4,14 @@
  * and would arrange the elements
  * on it's left and right side
  */
+
+ /**
+  * 
+  * @param {*} arr 
+  * @param {*} start 
+  * @param {*} end 
+  * @returns {Number}
+  */
 export const pivotHelper = (arr, start, end) => {
     // use pivot as the first element
     let pivot = arr[start],

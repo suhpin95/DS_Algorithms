@@ -14,7 +14,7 @@ const mergeSort = arr => {
 
     return mergeHelper(left,right);
 }
-
+//Module imported has been assigned to be used in recursion
 const mergeHelper = mergerHelper;
 
 console.log(mergeSort([10, 9, 8, 6, 4, 2, 1]));
