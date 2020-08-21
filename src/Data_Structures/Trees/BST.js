@@ -69,6 +69,47 @@ class BST{
 //      Edge Case
         if(!flag)return false;
         return current;
+    }
+    
+    /**
+     * 
+     * @param {*} val 
+     * @returns {Node}
+     */
+    insertRecursively(val){
+        let newNode = new Node(val);
+        if(!this.root){
+            this.root = newNode;
+            return this;
+        }
+        else{
+            this._insertHelper(this.root, newNode);
+        } 
+        
+    }
+    /**
+     * 
+     * @param {*} root 
+     * @param {*} newNode 
+     * @returns {Node}
+     */
+    _insertHelper(root, newNode){
+        // conditions for the left and right sub tree
+        
+        if(newNode.data < root.data){
+            if(!root.left){
+                root.left = newNode;
+                return this;
+            }
+           this._insertHelper(root.left,newNode)   
+        }
+        if(newNode.data > root.data){
+            if(!root.right){
+                root.right = newNode;
+                return this;
+            }
+            this._insertHelper(root.right,newNode);
+        }
     }   
 }
 
