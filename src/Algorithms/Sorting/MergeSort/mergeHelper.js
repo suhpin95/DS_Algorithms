@@ -9,7 +9,7 @@
  * @param {*} arr2 
  * @returns {Array}
  */
-const mergerHelper = (arr1, arr2) =>{
+export const mergerHelper = (arr1, arr2) =>{
     //1. use pointer to handle the traversal
     let i = 0
         ,j = 0; 
@@ -40,4 +40,4 @@ const mergerHelper = (arr1, arr2) =>{
         return result;
 }
 
-console.log(mergerHelper([1, 2, 12, 122], [2, 10, 99, 100]));
+// console.log(mergerHelper([1, 2, 12, 122], [2, 10, 99, 100]));

@@ -1,7 +1,4 @@
-/**
- * Write a function that would perform
- * Merge Sort of the given array
- */
+import { mergerHelper } from "./mergeHelper.js"
 /**
  * 
  * @param {*} arr 
@@ -17,41 +14,7 @@ const mergeSort = arr => {
 
     return mergeHelper(left,right);
 }
-/**
- * 
- * @param {*} arr1 
- * @param {*} arr2 
- * @returns {Array}
- */
-const mergeHelper = (arr1,arr2) => {
-        //1. use pointer to handle the traversal
-        let i = 0
-            ,j = 0; 
-        let result = [];
-        //2. Store the values in the ascending order
-            while( i < arr1.length && j < arr2.length){
-                if( arr1[i] < arr2[j] ){
-                    result.push(arr1[i])
-                    i++;
-                } else {
-                    result.push(arr2[j]);
-                    j++;
-                }
-            }//end while
-        //3. Store the remaining elements
-            while( i < arr1.length ){
-                // push the remaining items
-                result.push(arr1[i])
-                i++;
-            }//end while
-    
-            while( j < arr2.length) {
-                result.push(arr2[j]);
-                j++;
-            }//end while
-    
-        //4. return result
-            return result;
-}
+
+const mergeHelper = mergerHelper;
 
 console.log(mergeSort([10, 9, 8, 6, 4, 2, 1]));
