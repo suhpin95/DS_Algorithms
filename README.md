@@ -27,5 +27,8 @@ of computer science. It is a set of rules that precisely define a sequence of op
 * [MergeSort](src/Algorithms/Sorting/MergeSort)
 * [QuickSort](src/Algorithms/Sorting/QuickSort)
 * [RadixSort](src/Algorithms/Sorting/RadixSort)
+<<<<<<< HEAD
 * [Breadth First Search](src/Algorithms/Traversal/BFS)
 * [Depth First Search](src/Algorithms/Traversal/DFS)
+=======
+>>>>>>> 1bd5bdf77c70c13ed9088599b2a609d44c8b70db
