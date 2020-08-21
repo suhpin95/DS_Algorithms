@@ -4,13 +4,10 @@
  * and would arrange the elements
  * on it's left and right side
  */
-const pivotHelper = (arr, start = 0, end = arr.length + 1) => {
-    const swap = (arr, start, end) => {
-      [arr[start], arr[end]] = [arr[end], arr[start]];
-    };
+export const pivotHelper = (arr, start, end) => {
     // use pivot as the first element
     let pivot = arr[start],
-      swapIndex = 0;
+      swapIndex = start;
   
     // 1. loop through array
     for (var i = start + 1; i <= end; i++) {
@@ -28,6 +25,10 @@ const pivotHelper = (arr, start = 0, end = arr.length + 1) => {
     swap(arr, start, swapIndex);
     // 4. Return the index
     return swapIndex;
+  };
+
+  const swap = (arr, start, end) => {
+    [arr[start], arr[end]] = [arr[end], arr[start]];
   };
   console.log(pivotHelper([123, 213, 12, 1, 2, 3, 2]));
   
