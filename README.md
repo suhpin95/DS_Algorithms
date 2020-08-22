@@ -1,5 +1,5 @@
 # Algorithms and Data Structures
-    This repository contains implementation of popular data structure in JavaScript
+    This repository contains implementation of popular data structure & Algorithms in JavaScript
     
 ## Pre-requisite
   Understanding of: <br/>
