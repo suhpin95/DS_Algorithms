@@ -28,4 +28,52 @@ class Heap{
            childIndex = parentIndex;
        }
    }
+
+   extractMax(){
+    // swap the first and last element
+    let max = this.values[0];
+    let end = this.values.pop();
+    if(this.values.length > 0 ){
+        this.values[0] = end;
+    }
+    // re-adjust so that the property of the heap is maintained
+    this.trikleDown();
+    return max;
+   }
+
+   trikleDown(){
+       let index = 0;
+        const length = this.values.length;
+        const parent = this.values[0];
+        while(true){
+            let leftIndex =  2 * index + 1;
+            let rightIndex = 2 * index + 2;
+            // Not initalizing so that we need not have to face with out of bounds exception
+            let leftChild ,rightChild
+            let swap = null;
+            if(leftIndex < length){
+                leftChild = this.values[leftIndex];
+                if(parent < leftChild){
+                    swap = leftIndex;
+                }
+            }
+            if(rightIndex < leftIndex){
+                rightChild = this.values[rightIndex];
+                // checks the case where the parent is less than left and right
+                // and right is the greatest amongst the two
+                if( 
+                    (swap === null && parent < rightChild) || 
+                    (swap !== null && leftChild < rightChild)
+                  )
+                {
+                    swap = rightIndex;
+                }
+            }
+            // break if no swaps will be performed
+            if(swap === null)break;
+            this.values[index] = this.values[swap];
+            this.values[swap] = parent;
+            index = swap;
+        }
+   }
 }
