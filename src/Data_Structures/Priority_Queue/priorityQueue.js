@@ -1,10 +1,25 @@
-class Heap{
+/**
+ * Implement Min Heap Tree
+ * Because least priority 
+ * with min value
+ * has maximum value
+ */
+
+class Node{
+    constructor(val, priority){
+        this.val = val;
+        this.priority = priority;
+    }
+}
+class PriorityQueue{
     constructor(){
       this.values = [];
    }
 
-   insert(val){
-       this.values.push(val);
+   enqueue(val, priority){
+       // push the node
+       let newNode = new Node(val,priority)
+       this.values.push(newNode);
        this.bubbleUp();
    }
    
@@ -17,8 +32,8 @@ class Heap{
            let parentIndex = Math.floor((childIndex - 1) / 2 );
            let parentVal = this.values[parentIndex];
            
-            // compare the child and parent
-           if(parentVal >= childVal) break;
+            // compare the priorities of child and parent
+           if(parentVal.priority <= childVal.priority) break;
            
            // swap to the right position
            this.values[parentIndex] = childVal;
@@ -29,16 +44,17 @@ class Heap{
        }
    }
 
-   extractMax(){
+   dequeue(){
     // swap the first and last element
-    let max = this.values[0];
+    let min = this.values[0];
     let end = this.values.pop();
     if(this.values.length > 0 ){
         this.values[0] = end;
+        this.trikleDown();
     }
     // re-adjust so that the property of the heap is maintained
-    this.trikleDown();
-    return max;
+    
+    return min;
    }
 
    trikleDown(){
@@ -53,7 +69,7 @@ class Heap{
             let swap = null;
             if(leftIndex < length){
                 leftChild = this.values[leftIndex];
-                if(parent < leftChild){
+                if(parent.priority > leftChild.priority){
                     swap = leftIndex;
                 }
             }
@@ -62,8 +78,8 @@ class Heap{
                 // checks the case where the parent is less than left and right
                 // and right is the greatest amongst the two
                 if( 
-                    (swap === null && parent < rightChild) || 
-                    (swap !== null && leftChild < rightChild)
+                    (swap === null && parent.priority > rightChild.priority) || 
+                    (swap !== null && leftChild.priority > rightChild.priority)
                   )
                 {
                     swap = rightIndex;
