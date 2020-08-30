@@ -2,7 +2,10 @@ class Heap{
     constructor(){
       this.values = [];
    }
-
+   /**
+    * 
+    * @param {*} val 
+    */
    insert(val){
        this.values.push(val);
        this.bubbleUp();

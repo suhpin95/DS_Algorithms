@@ -12,6 +12,11 @@ class SinglyLinkedList{
         this.length = 0; 
     }
 //    Insert at the end
+    /**
+     * 
+     * @param {*} data 
+     * @returns { SinglyLinkedList }
+     */
     push(data){
         let node = new Node(data);
         
@@ -62,6 +67,11 @@ class SinglyLinkedList{
        return current;        
     }
 //  Insert at the end
+    /**
+     * 
+     * @param {*} data 
+     * @returns { SinglyLinkedList }
+     */
     unshift(data){
         let newNode = new Node(data);
 
@@ -76,6 +86,11 @@ class SinglyLinkedList{
         return this;
     }
 // Get the element at a particular index 
+    /**
+     * 
+     * @param {*} index 
+     * @returns { Node }
+     */
     get(index){
         if(index >= this.length || index < 0)return null;
         else{
@@ -87,6 +102,12 @@ class SinglyLinkedList{
         }
     }
 // Update the element at a particular index 
+    /**
+     * 
+     * @param {*} index 
+     * @param {*} data 
+     * @returns { Boolean }
+     */
     set(index,data){
         let current = this.get(index);
         if(current){
@@ -98,6 +119,12 @@ class SinglyLinkedList{
         
     }    
 // Insert element at the index
+    /**
+     * 
+     * @param {*} index 
+     * @param {*} val 
+     * @returns { Boolean }
+     */
     insert(index,val){
         if(index < 0 || index > this.length) return false;
         
@@ -118,6 +145,11 @@ class SinglyLinkedList{
         return true;
     }
 //     remove at a specific index
+    /**
+     * 
+     * @param {*} index 
+     * @returns { Node }
+     */
     remove(index){
         if(index < 0 || index >= this.length) return undefined;
         if(index === 0) return !!this.shift();

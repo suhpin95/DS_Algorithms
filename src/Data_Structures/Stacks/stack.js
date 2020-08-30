@@ -10,6 +10,12 @@ class Stack{
         this.last = null;
         this.length = 0;
     }
+
+    /**
+     * 
+     * @param {*} val 
+     * @returns { Number }
+     */
     push(val){
         let newNode = new Node(val);
         if(!this.first){

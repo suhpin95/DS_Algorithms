@@ -10,7 +10,10 @@ class Queue{
         this.first = null;
         this.last = null;
     }
-
+    /**
+     * 
+     * @param {*} val 
+     */
     enQueue(val){
         // Insertion at the end
         let node = new Node(val);

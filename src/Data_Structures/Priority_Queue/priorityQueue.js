@@ -15,7 +15,11 @@ class PriorityQueue{
     constructor(){
       this.values = [];
    }
-
+   /**
+    * 
+    * @param {*} val 
+    * @param {*} priority 
+    */
    enqueue(val, priority){
        // push the node
        let newNode = new Node(val,priority)

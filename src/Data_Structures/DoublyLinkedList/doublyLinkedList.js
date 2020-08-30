@@ -12,6 +12,11 @@ class DoublyLinkedList {
         this.length = 0;
     }
 //     insert the element at the end of the list
+    /**
+     * 
+     * @param {*} data 
+     * @returns {DoublyLinkedList}
+     */
     push(data){
         let newNode = new Node(data);
         if(!this.tail){
@@ -26,6 +31,9 @@ class DoublyLinkedList {
         return this;
     }
 //     delete at the end of the list
+    /**
+     * @returns {Node}
+     */
     pop(){
         if(!this.tail)return null
         if(this.length === 1){
@@ -43,6 +51,11 @@ class DoublyLinkedList {
         return deletedNode;
     }
 // Insert at the head
+    /**
+     * 
+     * @param {*} data 
+     * @returns { Node }
+     */
     unshift(data){
         let newNode = new Node(data);
         if(!this.head) {
@@ -60,6 +73,9 @@ class DoublyLinkedList {
         return this;
     }
 // Delete at the head
+    /**
+     * @returns { Node }
+     */
     shift(){
         let deleteNode = this.head;
         if(this.length === 1) {
@@ -75,6 +91,11 @@ class DoublyLinkedList {
         return deleteNode;
     }
     // Get element using the index;
+    /**
+     * 
+     * @param {*} index 
+     * @returns { Node }
+     */
     get(index){
         if(index < 0 || index >= this.length) return null;
         let node;
@@ -98,6 +119,12 @@ class DoublyLinkedList {
         }
     }
     // Update element using the index;
+    /**
+     * 
+     * @param {*} index 
+     * @param {*} val 
+     * @returns { Boolean }
+     */
     set(index,val){
         let foundNode = this.get(index);
         if(!!foundNode){
@@ -121,6 +148,11 @@ class DoublyLinkedList {
         this.length++;    
         return true;
     }
+    /**
+     * 
+     * @param {*} index 
+     * @returns { Node }
+     */
     remove(index){
         if(index < 0 || index >= this.length) return false;
         if(index === 0) return this.shift();

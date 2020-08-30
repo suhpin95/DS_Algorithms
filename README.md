@@ -17,6 +17,7 @@ A Data Structure is a way to store and organize data so that it can be used effi
 * [Binary Search Tree](src/Data_Structures/Trees/)
 * [Max Heap](src/Data_Structures/MaxHeaps)
 * [Priority Queue](src/Data_Structures/Priority_Queue)
+* [Hash Tables](src/Data_Structures/HashTable)
 
 ## Algorithm
 An algorithm is a procedure to accomplish a specific task. Algorithm design form one of the core practical technologies of computer science. It is a set of rules that precisely define a sequence of operations.
