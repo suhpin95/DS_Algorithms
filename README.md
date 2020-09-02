@@ -18,6 +18,7 @@ A Data Structure is a way to store and organize data so that it can be used effi
 * [Max Heap](src/Data_Structures/MaxHeaps)
 * [Priority Queue](src/Data_Structures/Priority_Queue)
 * [Hash Tables](src/Data_Structures/HashTable)
+* [Graph](src/Data_Structures/Graphs/graphs.js)
 
 ## Algorithm
 An algorithm is a procedure to accomplish a specific task. Algorithm design form one of the core practical technologies of computer science. It is a set of rules that precisely define a sequence of operations.
@@ -33,3 +34,6 @@ An algorithm is a procedure to accomplish a specific task. Algorithm design form
 ### Tree Traversal
 * [Breadth First Search](src/Algorithms/Traversal/BFS)
 * [Depth First Search](src/Algorithms/Traversal/DFS)
+
+### Graph Traversal
+* [Depth First Search](src/Data_Structures/Graphs/Graph_Traversal/DFS.js)
