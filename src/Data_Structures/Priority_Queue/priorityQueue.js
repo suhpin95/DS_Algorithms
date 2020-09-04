@@ -1,7 +1,6 @@
 /**
  * Implement Min Heap Tree
  * Because least priority 
- * with min value
  * has maximum value
  */
 
