@@ -38,3 +38,6 @@ An algorithm is a procedure to accomplish a specific task. Algorithm design form
 ### Graph Traversal
 * [Depth First Traversal](src/Data_Structures/Graphs/Graph_Traversal/DFS.js)
 * [Breadth First Traversal](src/Data_Structures/Graphs/Graph_Traversal/BFS.js)
+
+### Shortest Path Algorithm
+* [Dijsktra's Algorithm](src/Algorithms/Dijkstra/shortestPath.js)
