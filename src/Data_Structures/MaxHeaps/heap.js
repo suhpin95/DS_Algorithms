@@ -51,7 +51,7 @@ class Heap{
         while(true){
             let leftIndex =  2 * index + 1;
             let rightIndex = 2 * index + 2;
-            // Not initalizing so that we need not have to face with out of bounds exception
+            // Not initalizing so that we avoid out of bounds exception
             let leftChild ,rightChild
             let swap = null;
             if(leftIndex < length){
