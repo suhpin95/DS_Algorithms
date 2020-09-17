@@ -11,5 +11,8 @@
     "Data Structures"
   ],
   "author": "Suhas Pindiproli",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
 }
