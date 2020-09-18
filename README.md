@@ -10,34 +10,34 @@
 ## Data Structure
 A Data Structure is a way to store and organize data so that it can be used efficiently. It is all about rendering data elements in terms of some relationship, for better organization and storage.
 
-* [Singly Linked List](src/Data_Structures/SinglyLinkedList/)
-* [Doubly Linked List](src/Data_Structures/DoublyLinkedList/)
-* [Queue](src/Data_Structures/Queue/)
-* [Stack](src/Data_Structures/Stacks/)
-* [Binary Search Tree](src/Data_Structures/Trees/)
-* [Max Heap](src/Data_Structures/MaxHeaps)
-* [Priority Queue](src/Data_Structures/Priority_Queue)
-* [Hash Tables](src/Data_Structures/HashTable)
-* [Graph](src/Data_Structures/Graphs/graphs.js)
+* [Singly Linked List](Data_Structures/SinglyLinkedList)
+* [Doubly Linked List](Data_Structures/DoublyLinkedList)
+* [Queue](Data_Structures/Queue)
+* [Stack](Data_Structures/Stacks)
+* [Binary Search Tree](Data_Structures/Trees)
+* [Max Heap](Data_Structures/MaxHeaps)
+* [Priority Queue](Data_Structures/Priority_Queue)
+* [Hash Tables](Data_Structures/HashTable)
+* [Graph](Data_Structures/Graphs)
 
 ## Algorithm
 An algorithm is a procedure to accomplish a specific task. Algorithm design form one of the core practical technologies of computer science. It is a set of rules that precisely define a sequence of operations.
 
 ### Sorting
-* [BubbleSort](src/Algorithms/Sorting/BubbleSort)
-* [InsertionSort](src/Algorithms/Sorting/InsertionSort)
-* [SelectionSort](src/Algorithms/Sorting/SelectionSort)
-* [MergeSort](src/Algorithms/Sorting/MergeSort)
-* [QuickSort](src/Algorithms/Sorting/QuickSort)
-* [RadixSort](src/Algorithms/Sorting/RadixSort)
+* [BubbleSort](Algorithms/Sorting/BubbleSort)
+* [InsertionSort](Algorithms/Sorting/InsertionSort)
+* [SelectionSort](Algorithms/Sorting/SelectionSort)
+* [MergeSort](Algorithms/Sorting/MergeSort)
+* [QuickSort](Algorithms/Sorting/QuickSort)
+* [RadixSort](Algorithms/Sorting/RadixSort)
 
 ### Tree Traversal
-* [Breadth First Search](src/Algorithms/Traversal/BFS)
-* [Depth First Search](src/Algorithms/Traversal/DFS)
+* [Breadth First Search](Algorithms/Traversal/BFS)
+* [Depth First Search](Algorithms/Traversal/DFS)
 
 ### Graph Traversal
-* [Depth First Traversal](src/Data_Structures/Graphs/Graph_Traversal/DFS.js)
-* [Breadth First Traversal](src/Data_Structures/Graphs/Graph_Traversal/BFS.js)
+* [Depth First Traversal](Data_Structures/Graphs/Graph_Traversal)
+* [Breadth First Traversal](Data_Structures/Graphs/Graph_Traversal)
 
 ### Shortest Path Algorithm
-* [Dijsktra's Algorithm](src/Algorithms/Dijkstra/shortestPath.js)
+* [Dijsktra's Algorithm](Algorithms/Dijkstra)

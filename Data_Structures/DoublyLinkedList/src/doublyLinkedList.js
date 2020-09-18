@@ -5,7 +5,7 @@ class Node{
         this.prev = prev;
     }
 }
-class DoublyLinkedList {
+export default class DoublyLinkedList {
     constructor(head = null, tail = null){
         this.head = head;
         this.tail = tail;
